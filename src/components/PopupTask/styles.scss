@@ -1,0 +1,118 @@
+.MuiPaper-root{
+    padding: 16px;
+    .MuiDialogContent-root{
+        padding-top: 20px !important;
+    }
+    .MuiInputBase-root{
+        border-radius: 8px !important;
+    }
+    .MuiTypography-root{
+        color: #8D8D8D
+    }
+    .MuiOutlinedInput-notchedOutline{
+        border-color: #FF4669 !important;
+    }
+    .createButton{
+        background: #FF4669;
+        border: none;
+        border-radius: 16px;
+        padding: 2px 16px;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 30px;
+        text-align: left;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        color: #fff;
+        cursor: pointer
+    }
+    .cancelButton{
+        background: transparent;
+        border: none;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 30px;
+        text-align: left;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        color: #8D8D8D;
+        cursor: pointer;
+    }
+}
+
+.field {
+	position: relative;
+    background: #FCFCFC;
+    margin-bottom: 32px;
+    .label-before {
+        line-height: 20px;
+        font-size: 12px;
+        top: -22px;
+        left: -5px;
+        background: #fff;
+        padding: 0 6px;
+    }
+	label::before {
+		content: attr(title);
+		position: absolute;
+		top: 12px;
+		left: 24px;
+		font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: #898989;
+		transition: 300ms all;
+        cursor: text;
+	}
+	input {
+    line-height: 40px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #222;
+    background: transparent;
+    position: relative;
+    z-index: 99999;
+    border: 1.5px solid #FF4669;
+    border-radius: 8px;
+    height: 48px;
+    width: 425px;
+    padding-left: 24px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    color: #000;
+    &::placeholder{
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        color: #898989
+    }
+    &:focus{
+        outline: 0;
+      border: 2px solid #FF4669 !important;  
+    }
+		&:valid + label::before {
+			@extend .label-before;
+			content: attr(data-title);
+		}
+		&:focus + label::before {
+			@extend .label-before;
+			color: #FF4669;
+		}
+        &:not(:placeholder-shown) + label::before {
+			@extend .label-before;
+			color: #FF4669;
+		}
+	}
+}
